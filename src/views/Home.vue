@@ -1,29 +1,29 @@
 <template>
   <div class="homep">
-    <img alt="Vue logo" src="../assets/logo.jpg">
-    <p>EGOIST 10 Year Anniversary</p>
+    <img class="inori" src="../assets/inori.jpg">
+    <div class="head">
+    <p>EGOIST 10 Year Anniversary</p>    
     <span>Encouragement Form</span>    
-  
+    </div>
 
   <form @submit.prevent="submitForm">
-    <div>                        
-          <label class="text-lg leading-normal">From Fans:</label>
+    <div class="body">                        
+          <label>From Fans:</label>
             <input type="text"
                      id="submitform"
                      v-model="form"
                      @blur="validateForm"
-                      class="rounded bg-gray-200">
+                      class="w-60 rounded bg-gray-200">
             
                 <p v-if="invalidForm" class="text-lightpink">
                   <b>Please write something!!!</b>            
                 </p>                           
     </div>   
-    <button class="text-lightpink bg-black hover:text-opacity-80 border-lightpink">
+    <button class="submitbutton">
       Submit
     </button>                      
   </form>
 </div>
-
 </template>
 
 <script>
@@ -33,9 +33,7 @@
     data() {
       return {
         form: '',        
-        invalidForm: false,
-        
-        
+        invalidForm: false        
       }
     },
 

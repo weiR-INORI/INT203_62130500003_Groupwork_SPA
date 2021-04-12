@@ -4,9 +4,11 @@
 
 @tailwind utilities;
 
+
 .homep {
     @apply flex flex-col
-            justify-center items-center p-4;
+            justify-center items-center
+            text-lg;
 }
 
 .navbg {
@@ -27,4 +29,34 @@
 .navabout {
     @apply p-4
         text-lightpink hover:text-opacity-80;
+}
+
+.inori {
+    @apply w-auto h-96 object-contain m-2;    
+}
+
+.head {
+    @apply mt-2
+            flex flex-col
+            justify-center items-center
+            text-lg;
+}
+
+.body {
+    @apply mt-2
+            flex flex-col
+            justify-center items-center
+            text-lg;
+}
+
+.submitbutton {
+    @apply text-lightpink
+            bg-black
+            hover:text-opacity-80
+            rounded
+            border-lightpink
+            flex flex-col
+            justify-center items-center
+            mt-2
+            p-2;
 }
