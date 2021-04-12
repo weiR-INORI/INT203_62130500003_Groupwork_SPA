@@ -1,6 +1,5 @@
 <template>
-  <div class="profile">
-    <h1>{{ msg }}</h1>
+  <div class="profile">    
     <h1>Profile</h1>
     <h1>A fictional artist produced by ryo (supercell), born in the anime "Guilty Crown".<br>
 
@@ -24,19 +23,23 @@
       
       From March 2020, the national live tour EGOIST LIVE TOUR 2020 side-A "chry salizion code 404" will be held.<br>
       Released the limited-edition single "The meaning of love" in April 2020.<br>
-    </h1>
-   
+    </h1>   
   </div>
+  <Line></Line>
 </template>
 
 <script>
+  import Line from '@/components/Line.vue'
+
 export default {
-  name: 'Profile',
-  props: {
-    msg: String
+  name: 'About',
+  components: {
+    Line
   }
 }
 </script>
+
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 

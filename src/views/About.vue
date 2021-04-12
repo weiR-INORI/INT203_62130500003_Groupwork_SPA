@@ -8,7 +8,7 @@
   import Profile from '@/components/Profile.vue'
 
 export default {
-  name: 'Home',
+  name: 'About',
   components: {
     Profile
   }
