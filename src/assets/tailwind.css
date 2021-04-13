@@ -8,7 +8,8 @@
 .homep {
     @apply flex flex-col
             justify-center items-center
-            text-lg;
+            text-lg
+            w-full h-full md:w-auto;
 }
 
 .navbg {
@@ -53,10 +54,29 @@
     @apply text-lightpink
             bg-black
             hover:text-opacity-80
-            rounded
-            border-lightpink
+            rounded        
             flex flex-col
             justify-center items-center
             mt-2
             p-2;
 }
+
+.aboutp {
+    @apply w-full h-full md:w-auto;
+}
+
+.ryo {
+    @apply w-auto h-48 object-contain
+            border-4 border-black;
+}
+
+.chelly {
+    @apply w-auto h-48 object-contain
+            border-4 border-black;
+}
+
+.redjuice {
+    @apply w-auto h-48 object-contain
+            border-4 border-black;
+}
+
