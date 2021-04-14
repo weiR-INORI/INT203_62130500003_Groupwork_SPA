@@ -54,21 +54,61 @@
       console.log(`form value: ${this.form}`)
 
       if(this.form !== ''){
-        this.encourageResults.push({
+        //this.encourageResults.push({
+        //data: this.form
+        //})
+
+        //Post-2
+        this.addForm({
           data: this.form
         })
       }
       this.form = ''
-      console.log(`data: ${this.encourageResults[0].name}`)
+      //console.log(`data: ${this.encourageResults[0].name}`)
     },
     
+
     validateForm() {
         this.invalidForm = this.form === '' ? true : false
     },
 
-    addForm(newForm){
+    //Post
+    async addForm(newForm){
+      try {
+      const res = await fetch(this.url,{
+        method: 'POST',
+        headers: {
+          'content-type' : 'application/json'
+        },
+        body: JSON.stringify({
+          data: newForm.data
+        })
+      })
+      const resdata = await res.json()
+      this.encourageResults=[...this.encourageResults, resdata]
+      }
+        catch(error){
+        console.log(`addForm False!!! ${error}`)      
+        }
+    },
 
+    //Get
+    async getencourageResults(){
+      try {
+      const res = await fetch(this.url)
+      const resdata = await res.json()
+      return resdata
+      }
+      catch(error){
+        console.log(`getencourageResults False!!! ${error}`)    
+      }
     }
+  },
+
+
+  //Get-2
+  async created(){
+    this.encourageResults = await this.getencourageResults()
   }
 }
 </script>
