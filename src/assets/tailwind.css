@@ -23,13 +23,13 @@
 
 .navhome {
     @apply
-        text-lightpink hover:text-opacity-80;
+        text-lightpink hover:text-opacity-80 font-serif;
             
 }
 
 .navabout {
     @apply p-4
-        text-lightpink hover:text-opacity-80;
+        text-lightpink hover:text-opacity-80 font-serif;
 }
 
 .inori {
@@ -40,14 +40,14 @@
     @apply mt-4
             flex flex-col
             justify-center items-center
-            text-lg;
+            text-lg font-serif;
 }
 
 .body {
     @apply mt-4
             flex flex-col
             justify-center items-center
-            text-lg;
+            text-lg font-serif;
 }
 
 .submitbutton {
@@ -56,7 +56,8 @@
             hover:text-opacity-80
             rounded                                
             mt-4 ml-28
-            p-2;
+            p-2
+            font-serif;
 }
 
 .aboutp {
@@ -87,10 +88,10 @@
 }
 
 .editIcon {
-    @apply w-4 h-4;
+    @apply w-4 h-4 ;
 }
 
 .deleteIcon {
-    @apply w-4 h-4 mx-2;
+    @apply w-4 h-4 ml-4;
 }
 

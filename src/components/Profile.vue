@@ -1,7 +1,7 @@
 <template>
   <div class="profile">    
-    <p class="text-xl pl-40">Profile</p>    
-    <p class ="text-sm pl-40">
+    <p class="text-xl pl-40 font-serif">Profile</p>    
+    <p class ="text-sm pl-40 font-serif leading-relaxed">
       A fictional artist produced by ryo (supercell), born in the anime "Guilty Crown".<br>
 
       EGOIST's vocal chelly is a diva selected from over 2000 applicants.<br>
@@ -25,7 +25,7 @@
       EGOIST is also actively engaged in live activities, expanding overseas, and holding one-man performances in Hong Kong, Singapore, Shanghai, and Taiwan,<br>
       and the momentum has not stopped.<br>
       <br>
-      A fan club national tour "shoecase * 005" will be held in March and April 2019 at Higashi-Meihan Fukukita.<br>
+      A fan club national tour "showcase * 005" will be held in March and April 2019 at Higashi-Meihan Fukukita.<br>
       <br>
       From March 2020, the national live tour EGOIST LIVE TOUR 2020 side-A "chry salizion code 404" will be held.<br>
       Released the limited-edition single "The meaning of love" in April 2020.<br>
