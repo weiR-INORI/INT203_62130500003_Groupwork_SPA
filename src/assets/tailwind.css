@@ -33,18 +33,18 @@
 }
 
 .inori {
-    @apply w-auto h-96 object-contain m-2;    
+    @apply w-auto h-96 object-contain mt-4;    
 }
 
 .head {
-    @apply mt-2
+    @apply mt-4
             flex flex-col
             justify-center items-center
             text-lg;
 }
 
 .body {
-    @apply mt-2
+    @apply mt-4
             flex flex-col
             justify-center items-center
             text-lg;
@@ -54,10 +54,8 @@
     @apply text-lightpink
             bg-black
             hover:text-opacity-80
-            rounded        
-            flex flex-col
-            justify-center items-center
-            mt-2
+            rounded                                
+            mt-4 ml-28
             p-2;
 }
 
@@ -78,5 +76,21 @@
 .redjuice {
     @apply w-auto h-48 object-contain
             border-4 border-black;
+}
+
+.showResult {
+    @apply grid grid-cols-4 gap-4 md:gap-4
+            justify-around md:justify-around
+            space-x-4
+            break-words
+            py-4;
+}
+
+.editIcon {
+    @apply w-4 h-4;
+}
+
+.deleteIcon {
+    @apply w-4 h-4 mx-2;
 }
 

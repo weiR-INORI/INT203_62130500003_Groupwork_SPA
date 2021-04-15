@@ -1,22 +1,20 @@
 <template>
   <div class="aboutp">
     <Profile class="pt-4"></Profile>
-    <Line></Line>
+    <li-ne></li-ne>
     <Member class="pt-4"></Member>
-    <Line class="pb-4"></Line>
+    <li-ne class="pb-4"></li-ne>
   </div>
 </template>
 
 <script>
-  import Profile from '@/components/Profile.vue'
-  import Line from '@/components/Line.vue'
+  import Profile from '@/components/Profile.vue'  
   import Member from '@/components/Member.vue'
 
 export default {
   name: 'About',
   components: {
-    Profile,
-    Line,
+    Profile,    
     Member
   }
 }

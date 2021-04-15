@@ -13,7 +13,7 @@
                      id="submitform"
                      v-model="form"
                      @blur="validateForm"
-                      class="h-12 w-60 rounded bg-gray-200">
+                      class="mt-4 h-12 w-80 rounded bg-gray-200">
             
                 <p v-if="invalidForm" class="text-lightpink">
                   <b>Please write something!!!</b>            
@@ -23,13 +23,27 @@
         Submit
       </button>                      
     </form>
+    
+    <li-ne></li-ne>
+
     <div class="showResult">
       <ul v-for="encourage in encourageResults" :key="encourage.id">
        <li>
+        <div class="">
          <p>{{ encourage.data }}</p>
+         
+          <button @click="editEncourageResults(encourage)" class="editIcon">
+          <img src="../assets/pencil.png"/>
+          </button>
+
+          <button @click="deleteEncourageResults(encourage.id)" class="deleteIcon">
+          <img src="../assets/xmark.png"/>
+          </button>
+        </div>
        </li>
       </ul>
-    </div>     
+    </div>
+
   </div>
    
 </template>
@@ -37,6 +51,10 @@
 <script>
   
   export default {
+    name: 'App',
+    components: {
+    
+  },
 
     data() {
       return {
@@ -67,7 +85,6 @@
       //console.log(`data: ${this.encourageResults[0].name}`)
     },
     
-
     validateForm() {
         this.invalidForm = this.form === '' ? true : false
     },
@@ -102,9 +119,21 @@
       catch(error){
         console.log(`getencourageResults False!!! ${error}`)    
       }
+    },
+
+    //Delete
+    async deleteEncourageResults(deleteForm) {
+      try {
+        await fetch(`${this.url}/${deleteForm}`,{
+          method: 'DELETE'
+        })
+        this.encourageResults=this.encourageResults.filter(encourage=>encourage.id!==deleteForm)
+      }
+      catch(error){
+        console.log(`deleteEncourageResults False!!! ${error}`)   
+      }
     }
   },
-
 
   //Get-2
   async created(){
