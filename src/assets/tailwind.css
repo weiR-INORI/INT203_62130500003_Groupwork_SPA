@@ -95,3 +95,11 @@
     @apply w-4 h-4 ml-4;
 }
 
+.notFound {
+    @apply flex flex-col
+            justify-center items-center
+            text-4xl font-serif
+            w-full h-full md:w-auto
+            pt-20;
+}
+
